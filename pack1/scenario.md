@@ -1,0 +1,3 @@
+Scenario Summary: You need to manage persistent storage for a stateful application. A PersistentVolume (PV) and PersistentVolumeClaim (PVC) are provided but broken, causing binding failures. This tests implementing storage classes, volume types, access modes, and reclaim policies.
+
+Task: Apply the broken YAMLs. Debug and fix. Create a Pod named storage-test using busybox image that mounts the PVC at /data and runs sleep 3600. Verify by writing a file to /data in the Pod. Export the PVC status to /opt/pvc-status.txt using kubectl get pvc -o yaml.
